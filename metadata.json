@@ -1,5 +1,5 @@
 {
-  "name": "John - Meshi's Voice Assistant",
-  "description": "A multilingual voice assistant (English, French, Portuguese) providing information about Meshi Tuviana's professional background.",
+  "name": "Mister Big - Meshi's Voice Assistant",
+  "description": "A masculine, multilingual voice assistant (English, French, Portuguese) providing information about Meshi Tuviana's professional background.",
   "requestFramePermissions": ["microphone"]
 }

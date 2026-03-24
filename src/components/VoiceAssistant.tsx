@@ -3,8 +3,9 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Mic, MicOff, Volume2, VolumeX, MessageSquare } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
-const SYSTEM_INSTRUCTION = `You are John, a professional and friendly MALE voice assistant for Meshi Tuviana. 
+const SYSTEM_INSTRUCTION = `You are Mister Big, a professional and friendly MALE voice assistant for Meshi Tuviana. 
 It is CRITICAL that you maintain a masculine persona. 
+You MUST speak with a DEEP, LOW-PITCHED, and AUTHORITATIVE voice. 
 You speak English, French, and Brazilian Portuguese. 
 When speaking Portuguese, you MUST use a natural Brazilian accent and vocabulary.
 
@@ -24,8 +25,8 @@ Meshi's Profile:
 - Languages: Hebrew (native), English (fluent), French (B1).
 - Interests: Luxury fashion, visual branding, digital marketing, interior design, sustainable fashion.
 
-To start the conversation, you MUST say: "Holla i'm John . what would you like to know about Meshi." 
-Always respond as a man. Use a Brazilian accent for Portuguese. Be helpful and professional.`;
+To start the conversation, you MUST say: "Holla i'm Mister Big . what would you like to know about Meshi." 
+Always respond as a man with a deep voice. Use a Brazilian accent for Portuguese. Be helpful and professional.`;
 
 export default function VoiceAssistant() {
   const [isActive, setIsActive] = useState(false);
@@ -106,7 +107,7 @@ export default function VoiceAssistant() {
           systemInstruction: SYSTEM_INSTRUCTION,
           responseModalities: [Modality.AUDIO],
           speechConfig: {
-            voiceConfig: { prebuiltVoiceConfig: { voiceName: "Zephyr" } },
+            voiceConfig: { prebuiltVoiceConfig: { voiceName: "Charon" } },
           },
           generationConfig: {
             temperature: 0.7,
@@ -205,7 +206,7 @@ export default function VoiceAssistant() {
           MESHI TUVIANA
         </h1>
         <p className="font-sans text-sm uppercase tracking-[0.3em] opacity-60">
-          John - Personal Assistant Interface
+          Mister Big - Personal Assistant Interface
         </p>
       </motion.div>
 
@@ -266,7 +267,7 @@ export default function VoiceAssistant() {
             <span>Live Transcript</span>
           </div>
           <p className="text-sm leading-relaxed opacity-80 italic">
-            {isActive ? (transcript || "Listening...") : "Press the microphone to start talking to John."}
+            {isActive ? (transcript || "Listening...") : "Press the microphone to start talking to Mister Big."}
           </p>
         </div>
       </div>
